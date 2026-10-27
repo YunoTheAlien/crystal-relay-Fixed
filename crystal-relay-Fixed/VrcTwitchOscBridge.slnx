@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="VrcTwitchOscBridge/VrcTwitchOscBridge.csproj" />
+  <Project Path="VrcTwitchOscBridge.Tests/VrcTwitchOscBridge.Tests.csproj" />
+  <Project Path="CrystalRelayUpdater/CrystalRelayUpdater.csproj" />
+  <Project Path="LocalizationAudit/LocalizationAudit.csproj" />
+</Solution>

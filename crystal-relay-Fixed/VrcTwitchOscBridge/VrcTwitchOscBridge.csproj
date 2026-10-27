@@ -1,0 +1,324 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <UseWPF>true</UseWPF>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <ApplicationIcon>Assets\crystal-relay-icon.ico</ApplicationIcon>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Version>3.2.0</Version>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <FileVersion>3.2.0.0</FileVersion>
+    <InformationalVersion>3.2.0</InformationalVersion>
+    <AssemblyName>CrystalRelayTwitchOsc</AssemblyName>
+    <Product>Crystal Relay</Product>
+    <Title>Crystal Relay - Twitch to OSC</Title>
+    <Description>Crystal Relay Twitch to OSC bridge for VRChat</Description>
+    <Authors>ScreminPal</Authors>
+    <Company>ScreminPal</Company>
+    <Copyright>Copyright (c) 2026 ScreminPal</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/seluvia/crystal-relay-public</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <Page Include="MainWindow.xaml" />
+    <Page Include="ActiveFloatBoostRewardWindow.xaml" />
+    <Page Include="BuiltInCommandsWindow.xaml" />
+    <Page Include="BugReportWindow.xaml" />
+    <Page Include="BugReportPreviewWindow.xaml" />
+    <Page Include="DebugLogWindow.xaml" />
+    <Page Include="SupporterOverrideTimeSettingsWindow.xaml" />
+    <Page Include="ThemeBackgrounds\*.xaml" />
+    <Page Include="TestModeWindow.xaml" />
+    <Page Include="TwitchChatboxWindow.xaml" />
+    <Page Include="ThemedDialogWindow.xaml" />
+    <Page Include="RuleLockoutPickerWindow.xaml" />
+    <Page Include="AvatarPickerWindow.xaml" />
+    <Page Include="AvatarLibraryManagerWindow.xaml" />
+    <Page Include="ThemedInputDialog.xaml" />
+    <Page Include="AvatarSetsManagerWindow.xaml" />
+    <Page Include="AvatarScalingManagerWindow.xaml" />
+    <Page Include="UniversalTriggersManagerWindow.xaml" />
+    <Page Include="AvatarSwapManagerWindow.xaml" />
+    <Page Include="MovementRedeemsManagerWindow.xaml" />
+    <Page Include="CashPaymentManagerWindow.xaml" />
+    <Page Include="RewardFireSaleManagerWindow.xaml" />
+    <Page Include="VrChatLoginWindow.xaml" />
+    <Page Include="VrChatTwoFactorWindow.xaml" />
+    <Page Include="RedeemGroupEditorDialog.xaml" />
+    <Page Include="UserControls\AvatarSwapRuleEditorControl.xaml" />
+    <Page Include="UserControls\InlineBitsRuleRowControl.xaml" />
+    <Page Include="UserControls\InlineCashPaymentRuleEditorControl.xaml" />
+    <Page Include="UserControls\InlineChannelPointRuleRowControl.xaml" />
+    <Page Include="UserControls\InlinePaymentRuleRowControl.xaml" />
+    <Page Include="UserControls\InlineRouletteRuleRowControl.xaml" />
+    <Page Include="UserControls\InlinePowerUpRuleRowControl.xaml" />
+    <Page Include="UserControls\InlineRuleEditorControl.xaml" />
+    <Page Include="UserControls\InlineSubsRuleRowControl.xaml" />
+    <Page Include="UserControls\RouletteRewardSettingsControl.xaml" />
+
+    <Resource Include="Assets\crystal-relay-icon.ico" />
+    <Resource Include="Assets\crystal-relay-icon.png" />
+    <Resource Include="Assets\fooma-icon.png" />
+    <Resource Include="Assets\bubblegum-cuddles.png" />
+    <Resource Include="Assets\moon-bunny-wink.jpg" />
+    <Resource Include="Assets\rikuknifesticker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\**\*.mp3" />
+    <EmbeddedResource Include="Assets\**\*.wav" />
+    <EmbeddedResource Include="Assets\**\*.m4a" />
+    <EmbeddedResource Include="Assets\**\*.mp4" />
+    <EmbeddedResource Include="Assets\**\*.mov" />
+    <EmbeddedResource Include="Assets\**\*.webm" />
+    <EmbeddedResource Include="Assets\**\*.avi" />
+    <EmbeddedResource Include="Resources\Localization\*.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="ActiveFloatBoostRewardWindow.xaml.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BuiltInCommandsWindow.xaml.cs" />
+    <Compile Include="BugReportWindow.xaml.cs" />
+    <Compile Include="BugReportPreviewWindow.xaml.cs">
+      <DependentUpon>BugReportPreviewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DebugLogWindow.xaml.cs" />
+    <Compile Include="ComboBoxInteraction.cs" />
+    <Compile Include="MainWindow.xaml.cs" />
+    <Compile Include="PasswordBoxBinding.cs" />
+    <Compile Include="SupporterOverrideTimeSettingsWindow.xaml.cs" />
+    <Compile Include="TestModeWindow.xaml.cs" />
+    <Compile Include="TwitchChatboxWindow.xaml.cs" />
+    <Compile Include="ThemedDialogWindow.xaml.cs" />
+    <Compile Include="RuleLockoutPickerWindow.xaml.cs" />
+    <Compile Include="AvatarPickerWindow.xaml.cs" />
+    <Compile Include="AvatarLibraryManagerWindow.xaml.cs" />
+    <Compile Include="ThemedInputDialog.xaml.cs" />
+    <Compile Include="AvatarSetsManagerWindow.xaml.cs" />
+    <Compile Include="AvatarScalingManagerWindow.xaml.cs">
+      <DependentUpon>AvatarScalingManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UniversalTriggersManagerWindow.xaml.cs">
+      <DependentUpon>UniversalTriggersManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AvatarSwapManagerWindow.xaml.cs">
+      <DependentUpon>AvatarSwapManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MovementRedeemsManagerWindow.xaml.cs">
+      <DependentUpon>MovementRedeemsManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CashPaymentManagerWindow.xaml.cs">
+      <DependentUpon>CashPaymentManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardFireSaleManagerWindow.xaml.cs">
+      <DependentUpon>RewardFireSaleManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\UniversalTriggersManagerViewModel.cs" />
+    <Compile Include="ViewModels\UniversalTriggerCardViewModel.cs" />
+    <Compile Include="ViewModels\AvatarScalingManagerViewModel.cs" />
+    <Compile Include="ViewModels\AvatarScalingSourceCardViewModel.cs" />
+    <Compile Include="ViewModels\AvatarSetsManagerViewModel.cs" />
+    <Compile Include="ViewModels\AvatarSetCardViewModel.cs" />
+    <Compile Include="ViewModels\CashPaymentManagerViewModel.cs" />
+    <Compile Include="ViewModels\RewardFireSaleManagerViewModel.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="Converters\UniversalTriggerValueConverters.cs" />
+    <Compile Include="Converters\AvatarSwapConverters.cs" />
+    <Compile Include="VrChatLoginWindow.xaml.cs" />
+    <Compile Include="VrChatTwoFactorWindow.xaml.cs" />
+    <Compile Include="RedeemGroupEditorDialog.xaml.cs" />
+    <Compile Include="UserControls\AvatarSwapRuleEditorControl.xaml.cs">
+      <DependentUpon>AvatarSwapRuleEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EnumToBoolConverter.cs" />
+    <Compile Include="UserControls\InlineBitsRuleRowControl.xaml.cs">
+      <DependentUpon>InlineBitsRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlineCashPaymentRuleEditorControl.xaml.cs">
+      <DependentUpon>InlineCashPaymentRuleEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlineChannelPointRuleRowControl.xaml.cs">
+      <DependentUpon>InlineChannelPointRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlinePaymentRuleRowControl.xaml.cs">
+      <DependentUpon>InlinePaymentRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlineRouletteRuleRowControl.xaml.cs">
+      <DependentUpon>InlineRouletteRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlinePowerUpRuleRowControl.xaml.cs">
+      <DependentUpon>InlinePowerUpRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlineRuleEditorControl.xaml.cs">
+      <DependentUpon>InlineRuleEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InlineSubsRuleRowControl.xaml.cs">
+      <DependentUpon>InlineSubsRuleRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RouletteRewardSettingsControl.xaml.cs">
+      <DependentUpon>RouletteRewardSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RouletteRewardSettingsControl.xaml.cs">
+      <DependentUpon>RouletteRewardSettingsControl.xaml</DependentUpon>
+    </Compile>
+
+    <Compile Include="Infrastructure\AsyncRelayCommand.cs" />
+    <Compile Include="Infrastructure\ObservableObject.cs" />
+    <Compile Include="Infrastructure\RelayCommand.cs" />
+    <Compile Include="Models\AppTheme.cs" />
+    <Compile Include="Models\CustomThemeSettings.cs" />
+    <Compile Include="Models\ActivityResumeSnapshot.cs" />
+    <Compile Include="Models\AppLanguage.cs" />
+    <Compile Include="Models\AppSettings.cs" />
+    <Compile Include="Models\AvatarTriggerProfile.cs" />
+    <Compile Include="Models\TriggerRuleSource.cs" />
+    <Compile Include="Models\AvatarSwapProfile.cs" />
+    <Compile Include="Models\AvatarRouletteProfile.cs" />
+    <Compile Include="Models\AvatarSetsFilterMode.cs" />
+    <Compile Include="Models\AvatarSetsSortMode.cs" />
+    <Compile Include="Models\AvatarScaleRule.cs" />
+    <Compile Include="Models\AvatarScaleSafetySettings.cs" />
+    <Compile Include="Models\CashPaymentRule.cs" />
+    <Compile Include="Models\ChatCommandPermission.cs" />
+    <Compile Include="Models\ChatCommandUtility.cs" />
+    <Compile Include="Models\FloatActionMode.cs" />
+    <Compile Include="Models\FloatClampMode.cs" />
+    <Compile Include="Models\FloatValueMode.cs" />
+    <Compile Include="Models\IntZeroDurationMode.cs" />
+    <Compile Include="Models\MovementRedeemSet.cs" />
+    <Compile Include="Models\OscActionType.cs" />
+    <Compile Include="Models\OscParameterType.cs" />
+    <Compile Include="Models\PlayerMovementDirection.cs" />
+    <Compile Include="Models\MovementCategory.cs" />
+    <Compile Include="Models\MovementTypeClassifier.cs" />
+    <Compile Include="Models\PowerUpRule.cs" />
+    <Compile Include="Models\RedeemGroup.cs" />
+    <Compile Include="Models\ResumeActivity.cs" />
+    <Compile Include="Models\ResumeActivityType.cs" />
+    <Compile Include="Models\RewardFireSaleSettings.cs" />
+    <Compile Include="Models\SetTriggerAction.cs" />
+    <Compile Include="Models\TriggerRule.cs" />
+    <Compile Include="Models\TwitchAccountSettings.cs" />
+    <Compile Include="Models\TwitchRewardSyncMode.cs" />
+    <Compile Include="Models\TwitchTriggerType.cs" />
+    <Compile Include="Models\UniversalTriggerAction.cs" />
+    <Compile Include="Models\UniversalTriggerRule.cs" />
+    <Compile Include="Models\UniversalTriggerType.cs" />
+    <Compile Include="Models\UniversalTriggerValueKind.cs" />
+    <Compile Include="Models\VrChatAccountSettings.cs" />
+    <Compile Include="Models\VrChatAvatarSummary.cs" />
+    <Compile Include="Models\VrChatFavoriteGroup.cs" />
+    <Compile Include="Models\VrChatConnectionState.cs" />
+    <Compile Include="Models\AvatarLibrary.cs" />
+    <Compile Include="Models\AvatarPickerViewMode.cs" />
+    <Compile Include="Models\AvatarTagDisplay.cs" />
+    <Compile Include="Models\FilterOption.cs" />
+    <Compile Include="Models\VrChatOscParameterSummary.cs" />
+    <Compile Include="Models\VrChatTwoFactorMethod.cs" />
+    <Compile Include="Models\WardrobeSnapshotParam.cs" />
+    <Compile Include="Models\WardrobeOutfit.cs" />
+    <Compile Include="Models\WorldCommandBlacklistSettings.cs" />
+    <Compile Include="Models\XSOverlaySettings.cs" />
+    <Compile Include="Models\BlockedWordItem.cs" />
+    <Compile Include="Services\AppDataPaths.cs" />
+    <Compile Include="Services\AvatarImageService.cs" />
+    <Compile Include="Services\AvatarPickerService.cs" />
+    <Compile Include="Services\ApplicationRestartService.cs" />
+    <Compile Include="Services\ApplicationBuildIdentity.cs" />
+    <Compile Include="Services\ApplicationSelfUpdateService.cs" />
+    <Compile Include="Services\ApplicationUpdatePackageRules.cs" />
+    <Compile Include="Services\ApplicationUpdateRollback.cs" />
+    <Compile Include="Services\ApplicationUpdateService.cs" />
+    <Compile Include="Services\AvatarSwapMigrationService.cs" />
+    <Compile Include="Services\CashPaymentRuleJsonConverter.cs" />
+    <Compile Include="Services\BridgeAccountRole.cs" />
+    <Compile Include="Services\BridgeCoordinator.cs" />
+    <Compile Include="Services\BridgeRuntimeConfiguration.cs" />
+    <Compile Include="Services\BugReportService.cs" />
+    <Compile Include="Services\BugReportSnapshotService.cs" />
+    <Compile Include="Services\BugReportPreviewBuilder.cs" />
+    <Compile Include="Services\CashPaymentProviderService.cs" />
+    <Compile Include="Services\ChatboxRelayModerationFilter.cs" />
+    <Compile Include="Services\ChatTipBotParser.cs" />
+    <Compile Include="Services\ChatTipBotWhitelist.cs" />
+    <Compile Include="Services\CrashLogService.cs" />
+    <Compile Include="Services\DebugLogService.cs" />
+    <Compile Include="Services\DevChatCommandParser.cs" />
+    <Compile Include="Services\DesktopInputLockService.cs" />
+    <Compile Include="Services\EmbeddedMediaCacheService.cs" />
+    <Compile Include="Services\FoomaInteractionConfigImporter.cs" />
+    <Compile Include="Services\FloatActionDispatch.cs" />
+    <Compile Include="Services\FloatLimitDetection.cs" />
+    <Compile Include="Services\FloatValueModeConverter.cs" />
+    <Compile Include="Services\LoadingPhaseService.cs" />
+    <Compile Include="Services\LocalizationService.cs" />
+    <Compile Include="Services\LiveFeedbackHeartbeatService.cs" />
+    <Compile Include="Services\ManagedRewardPresentation.cs" />
+    <Compile Include="Services\OscAvatarChangeMerger.cs" />
+    <Compile Include="Services\OscRouterService.cs" />
+    <Compile Include="Services\RuntimeConfig.cs" />
+    <Compile Include="Services\RuntimeConfigStore.cs" />
+    <Compile Include="Services\ReschedulableActivityDeadline.cs" />
+    <Compile Include="Services\SavedLoginStateRecoveryService.cs" />
+    <Compile Include="Services\ShutdownRecoveryStateStore.cs" />
+    <Compile Include="Services\SettingsStore.cs" />
+    <Compile Include="Services\SensitiveTextSanitizer.cs" />
+    <Compile Include="Services\Support\SupportOverrideCapMath.cs" />
+    <Compile Include="Services\Support\SupportOverrideDurationMath.cs" />
+    <Compile Include="Services\TwitchApiClient.cs" />
+    <Compile Include="Services\TwitchApiException.cs" />
+    <Compile Include="Services\ThemeManager.cs" />
+    <Compile Include="Services\TwitchAccountReconnectRequiredException.cs" />
+    <Compile Include="Services\TwitchEventSubSession.cs" />
+    <Compile Include="Services\TwitchScopes.cs" />
+    <Compile Include="Services\UniversalTriggerFusionService.cs" />
+    <Compile Include="Services\VrChatApiClient.cs" />
+    <Compile Include="Services\VrChatApiException.cs" />
+    <Compile Include="Services\VrChatApiRoutes.cs" />
+    <Compile Include="Services\VrChatLocalAvatarDataService.cs" />
+    <Compile Include="Services\VrChatLocalClientStateService.cs" />
+    <Compile Include="Services\VrChatLocalOscCacheService.cs" />
+    <Compile Include="Services\VrChatOscClient.cs" />
+    <Compile Include="Services\WardrobeExecutorService.cs" />
+    <Compile Include="Services\WindowPlacementStateStore.cs" />
+    <Compile Include="Services\WindowsCredentialStore.cs" />
+    <Compile Include="Services\ActivityResumeService.cs" />
+    <Compile Include="Services\IActivityResumeService.cs" />
+    <Compile Include="Services\WorldCommandBlacklistService.cs" />
+    <Compile Include="Services\XSOverlayNotificationService.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\AvatarPickerViewModel.cs" />
+    <Compile Include="ViewModels\AvatarLibraryManagerViewModel.cs" />
+    <Compile Include="ViewModels\AvatarAssignmentRow.cs" />
+    <Compile Include="UserControls\InlineBitsRuleRowViewModel.cs" />
+    <Compile Include="UserControls\InlineChannelPointRuleRowViewModel.cs" />
+    <Compile Include="UserControls\InlinePaymentRuleRowViewModel.cs" />
+    <Compile Include="UserControls\InlinePowerUpRuleRowViewModel.cs" />
+    <Compile Include="UserControls\InlineRouletteRuleRowViewModel.cs" />
+    <Compile Include="UserControls\InlineSubsRuleRowViewModel.cs" />
+    <Compile Include="UserControls\IRuleRowViewModel.cs" />
+    <Compile Include="UserControls\RuleListPaneViewModel.cs" />
+    <Compile Include="ViewModels\AvatarRouletteCardViewModel.cs" />
+    <Compile Include="ViewModels\AvatarSwapCardViewModel.cs" />
+    <Compile Include="ViewModels\AvatarSwapRuleEditorViewModel.cs" />
+    <Compile Include="ViewModels\AvatarSwapManagerViewModel.cs" />
+    <Compile Include="ViewModels\ITwitchRewardSource.cs" />
+    <Compile Include="ViewModels\MovementRedeemCardViewModel.cs" />
+    <Compile Include="ViewModels\MovementRedeemsManagerViewModel.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\oscquery-lib\vrc-oscquery-lib\vrc-oscquery-lib.csproj" SetTargetFramework="TargetFramework=net6.0" />
+  </ItemGroup>
+</Project>

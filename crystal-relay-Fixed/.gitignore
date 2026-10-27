@@ -1,0 +1,43 @@
+﻿.vs/
+.vscode/
+.idea/
+.opencode/
+.superpowers/
+.worktrees/
+opencode.json
+
+.appdata/
+.dotnet/
+.dotnet-home/
+.nuget/
+.wrangler/
+**/.wrangler/
+**/.dev.vars
+
+Backups/
+Backup-Crystal-Relay-Source/
+Releases/
+TestBuilds/
+Code Review/
+temp-build/
+RunCache/
+docs/superpowers/
+
+**/bin/
+**/obj/
+
+\!open-opencode.bat
+\!start-opencode Server.bat
+\!start-server.sh - Shortcut.lnk
+\!stop-server.sh - Shortcut.lnk
+Launch-Crystal-Relay-Debug.bat
+*.user
+*.suo
+*.cache
+*.tmp
+*.nupkg
+
+appsettings.Development.json
+secrets.json
+bridge.runtime.local.json
+*.local.json
